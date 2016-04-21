@@ -1,4 +1,4 @@
-# Java Chatbot for Zombie Website
+# JavaScript Chatbot for Zombie Website
 Authors: Joel and Kevin
 
-Description: Chatbot in Java that responds to user input.
+Description: Chatbot written in JavaScript that responds to user input.
