@@ -42,7 +42,7 @@ function sleepQ(){
 }
 //length of apocalypse//
 function daysQ(){
-	var days = window.prompt("Approxmately how many days have their been zombies around?");
+	var days = window.prompt("Approximately how many days have their been zombies around?");
 	var daysP = parseFloat(days);
 	if (daysP >0){
 		var add = days/100;
