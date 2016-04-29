@@ -7,6 +7,7 @@ function sanityTest(){
 	daysQ();
 	deadFriendsQ();
 	IQQ();
+	willingTest();
 }
 function getError(){
 	window.alert("That's an invalid input.");
@@ -68,7 +69,7 @@ function deadFriendsQ(){
 	}
 }
 function IQQ(){
-	vsr IQ = window.prompt("What's your IQ.");
+	var IQ = window.prompt("What's your IQ.");
 	var IQP parseFloat(IQ);
 	if (IQP >= 0){
 		addSanity(130-IQP);
@@ -78,4 +79,29 @@ function IQQ(){
 		IQQ();
 	}
 }
-//function willin
+function willingTest(){
+	var will = window.prompt("Did you willingly take this test?");
+	if (will == "yes" || "Yes"){
+		//nothing happens
+	}
+	else if (will == "no" || "No")
+		{
+			addSanity(6);
+		}
+	else{
+		getError();
+		willingTest();
+	}
+}
+function lastEaten(){
+	var eatan = window.prompt("In hours, when was the last time you've eaten");
+	var eatanP parseFloat(eatan);
+	if (eatanP >= 0)
+		{
+		addSanity(.8 * eatanP)
+		}
+	else{
+		getError();
+		lastEaten();
+	}
+}
