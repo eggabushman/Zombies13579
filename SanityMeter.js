@@ -26,7 +26,7 @@ function getSanity(insanity) //returns insanity as an int
 //sleep//
 function sleepQ(){
 	var lastsleep;
-	lastsleep = window.prompt("How many hours ago have you slept?");
+	lastsleep = window.prompt("How many hours ago did you last sleep?");
 	var lastsleepP = parseInt(lastsleep); //turns the string into an int
 	
 	if(lastsleepP < 8 && lastsleepP >=0){
@@ -44,7 +44,7 @@ function sleepQ(){
 }
 //length of apocalypse//
 function daysQ(){
-	var days = window.prompt("Approxmately how many days have their been zombies around?");
+	var days = window.prompt("Approxmately how many days have passed since the zombies first appeared?");
 	var daysP = parseFloat(days);
 	if (daysP >=0){
 		var add = daysP/100;
@@ -56,7 +56,7 @@ function daysQ(){
 	}
 }
 function deadFriendsQ(){
-	var dead = window.prompt("How many of those close to you have died?");
+	var dead = window.prompt("How many of your close friends have died?");
 	var deadP = parseFloat(dead);
 	if(deadP ==0){} //nothing added 
 	else if(deadP > 0){
@@ -69,7 +69,7 @@ function deadFriendsQ(){
 	}
 }
 function IQQ(){
-	var IQ = window.prompt("What's your IQ.");
+	var IQ = window.prompt("What is your IQ?");
 	var IQP parseFloat(IQ);
 	if (IQP >= 0){
 		addSanity(130-IQP);
@@ -94,7 +94,7 @@ function willingTest(){
 	}
 }
 function lastEaten(){
-	var eaten = window.prompt("In hours, when was the last time you've eaten");
+	var eaten = window.prompt("In hours, when was the last time you ate?");
 	var eatenP parseFloat(eaten);
 	if (eatenP >= 0)
 		{
