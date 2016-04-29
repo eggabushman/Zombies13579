@@ -94,11 +94,11 @@ function willingTest(){
 	}
 }
 function lastEaten(){
-	var eatan = window.prompt("In hours, when was the last time you've eaten");
-	var eatanP parseFloat(eatan);
-	if (eatanP >= 0)
+	var eaten = window.prompt("In hours, when was the last time you've eaten");
+	var eatenP parseFloat(eaten);
+	if (eatenP >= 0)
 		{
-		addSanity(.8 * eatanP)
+		addSanity(.8 * eatenP)
 		}
 	else{
 		getError();
