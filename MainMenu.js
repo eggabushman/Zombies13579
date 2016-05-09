@@ -7,7 +7,7 @@ function MainMenu()
 
 	while (exitLoop) 
 	{
-		var choice = window.prompt("Choose an option: \n1. Sanity Test  \n2. Personalized Guide  \n3. First Aid \n4. Quit");
+		var choice = window.prompt("Choose an option: \n1. Sanity Test  \n2. Personalized Guide  \n3. First Aid  \n4. Quit");
 
 		switch (choice) 
 		{
