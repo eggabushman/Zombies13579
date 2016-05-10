@@ -1,3 +1,5 @@
+var severity = 0;
+
 function firstAid() // driver function
 {
 	bittenQ();
@@ -12,15 +14,16 @@ function getError()  // throws a JS alert if input is invalid
 
 function bittenQ()
 {
-	var bitten;
-	bitten = window.prompt("Were you bitten by a zombie?")
+	var bitten = window.prompt("Were you bitten by a zombie?")
 
-	if (bitten === "yes" || bitten === "Yes")
+	if (bitten == "yes" || bitten == "Yes")
 	{
 		window.alert("Unfortunately, there is no cure for zombie bites right now. You regrettably have no choice but to assume the worst.");
 	} 
-	else 
+	else if (bitten === "no" || bitten == "No")
 	{
-		
+		window.alert("Good. That means you still have a chance to live.")
 	}
+
+
 }
