@@ -14,12 +14,14 @@ function MainMenu()
 			case 1:
 				sanityMeter();
 				exitLoop = false;
+				break;
 			/*case 2:
 				personalGuide();
 				exitLoop = false; */
 			case 2:
 				firstAid();
 				exitLoop = false;
+				break;
 			case 3:
 				break;
 			default:
