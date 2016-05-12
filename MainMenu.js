@@ -7,7 +7,7 @@ function MainMenu()
 
 	while (exitLoop) 
 	{
-		var choice = window.prompt("Choose an option: \n1. Sanity Test  \n2. Personalized Guide  \n3. First Aid  \n4. Quit");
+		var choice = window.prompt("Choose an option: \n1. Sanity Test  \n2. First Aid  \n3. Quit");
 
 		switch (choice) 
 		{
@@ -17,10 +17,10 @@ function MainMenu()
 			/*case 2:
 				personalGuide();
 				exitLoop = false; */
-			case 3:
+			case 2:
 				firstAid();
 				exitLoop = false;
-			case 4:
+			case 3:
 				break;
 			default:
 				window.alert("That's not an option!");
