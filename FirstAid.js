@@ -132,7 +132,7 @@ function chest()
 		{
 			case 1:
 				severity += 10;
-				window.alert("Are you holding your breath without realizing it? That uses up your energy. Breathe. SLOWLY. Again. And Again. And Again. Do this ten more times.);
+				window.alert("Are you holding your breath without realizing it? That uses up your energy. Breathe. SLOWLY. Again. And Again. And Again. Do this ten more times.");
 				exitLoop = false;
 			case 2:
 				severity += 20;
