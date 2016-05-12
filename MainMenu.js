@@ -11,10 +11,13 @@ function MainMenu()
 		window.resizeTo(100);
 		switch (choice) 
 		{
+
 			case "Sanity Test":
 				
 				sanityTest();
+
 				exitLoop = false;
+				break;
 			/*case 2:
 				personalGuide();
 				exitLoop = false; */
