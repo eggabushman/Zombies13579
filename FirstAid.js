@@ -5,12 +5,13 @@ var severity = 0;
 function firstAid() // driver function
 {
 
-	bittenQ();
+	bittenQuestion();
 
-	if (bittenQ() == true) 
+	if (bittenQuestion() == true) 
 		bittenEmergency();
 
-	bodyPart();
+	getBodyPart();
+
 	getDiag(severity);
 }
 
@@ -21,7 +22,7 @@ function getError()  // throws a JS alert if input is invalid
 
 /* Question methods below */
 
-function bittenQ() // checks if bitten, which can greatly change severity
+function bittenQuestion() // checks if bitten, which can greatly change severity
 {
 	var bitten = window.prompt("Have you been bitten? Most zombie infections are transmissible diseases.");
 	var answer;
@@ -57,7 +58,7 @@ function bittenEmergency()
 	}
 }
 
-function bodyPart()
+function getBodyPart()
 {
 	while (exitLoop) 
 	{
@@ -85,8 +86,9 @@ function bodyPart()
 				exitLoop = true; 
 		}
 	}
-
 }
+
+/*    begin getBodyPart functions    */
 
 function head()
 {
@@ -128,7 +130,7 @@ function chest()
 	while (exitLoop)
 	{
 		var chestPain = window.prompt("How badly does it hurt? \n1. Not too much \n2. Kind of \n3. Badly \n4. Really badly \n5. Really, REALLY badly")
-		switch (headPain)
+		switch (chestPain)
 		{
 			case 1:
 				severity += 10;
@@ -140,11 +142,11 @@ function chest()
 				exitLoop = false;
 			case 3: 
 				severity += 30;
-				window.alert("Be careful!");
+				window.alert("Be careful! This is where you start taking that pain in your chest seriously. Do not perform any strenuous activity. In fact, just lie down and rest for a while before you do anything else at all.");
 				exitLoop = false;
 			case 4: 
 				severity += 40;
-				window.alert("Get a full day's rest and quarantine yourself just to be safe. DO NOT GET ANGRY IF POSSIBLE.");
+				window.alert("Take off any clothing you may be wearing on the top half of your body and inspect your chest closely. Do you see any wound marks? Bad pain in your chest means that your heart is struggling to keep up with something.");
 				exitLoop = false;
 			case 5:
 				severity += 50;
@@ -156,23 +158,114 @@ function chest()
 				exitLoop = true;
 		}
 	}
-
 }
 
 function abdomen()
 {
-
+	while (exitLoop)
+	{
+		var abPain = window.prompt("How badly does it hurt? \n1. Not too much \n2. Kind of \n3. Badly \n4. Really badly \n5. Really, REALLY badly")
+		switch (abPain)
+		{
+			case 1:
+				severity += 10;
+				window.alert("Consider taking a trip to the restroom. Slight pain in your abdomen usually isn't more serious than just a routine stomachache.");
+				exitLoop = false;
+			case 2:
+				severity += 20;
+				window.alert("You're expending too much energy. Stop running around too much.");
+				exitLoop = false;
+			case 3: 
+				severity += 30;
+				window.alert("Definitely take that trip to the restroom. I'll say no more, you just try your best.");
+				exitLoop = false;
+			case 4: 
+				severity += 40;
+				window.alert("At this point, it may not be something you ate that's bothering you. Inspect your abdomen for any kind of small wound. The human digestion system is greatly aggravated by zombification.");
+				exitLoop = false;
+			case 5:
+				severity += 50;
+				window.alert("You have been bitten. Drop everything and do the following steps IMMEDIATELY.")
+				bittenEmergency();
+				exitLoop = false;
+			default:
+				getError();
+				exitLoop = true;
+		}
+	}
 }
 
 function armsOrHands()
 {
-
+	while (exitLoop)
+	{
+		var armsPain = window.prompt("How badly does it hurt? \n1. Not too much \n2. Kind of \n3. Badly \n4. Really badly \n5. Really, REALLY badly")
+		switch (armsPain)
+		{
+			case 1:
+				severity += 10;
+				window.alert("Take a rest from working so hard. Slight pain in your arms or hands is most likely a sign of fatigue.");
+				exitLoop = false;
+			case 2:
+				severity += 20;
+				window.alert("Definitely get some rest. Don't use your arms and hands if possible during that rest.");
+				exitLoop = false;
+			case 3: 
+				severity += 30;
+				window.alert("Use your arms and hands as little as humanly possible for the next 12 hours.");
+				exitLoop = false;
+			case 4: 
+				severity += 40;
+				window.alert("Your arms and hands are two of the most common locations for zombie bites. Inspect your arms and hands for any kind of small wound.");
+				exitLoop = false;
+			case 5:
+				severity += 50;
+				window.alert("You have been bitten. Drop everything and do the following steps IMMEDIATELY.")
+				bittenEmergency();
+				exitLoop = false;
+			default:
+				getError();
+				exitLoop = true;
+		}
+	}
 }
 
 function legsOrFeet()
 {
-
+	while (exitLoop)
+	{
+		var legsPain = window.prompt("How badly does it hurt? \n1. Not too much \n2. Kind of \n3. Badly \n4. Really badly \n5. Really, REALLY badly")
+		switch (legsPain)
+		{
+			case 1:
+				severity += 10;
+				window.alert("Take a rest from walking or running so hard. Slight pain in your arms or hands is most likely a sign of fatigue.");
+				exitLoop = false;
+			case 2:
+				severity += 20;
+				window.alert("You're expending too much energy. Stop running around too much.");
+				exitLoop = false;
+			case 3: 
+				severity += 30;
+				window.alert("Stay there like a good person and don't move around too much for the next 12 hours.");
+				exitLoop = false;
+			case 4: 
+				severity += 40;
+				window.alert("Your legs and feet are two of the most common locations for zombie bites. Inspect your legs and feet for any kind of small wound.");
+				exitLoop = false;
+			case 5:
+				severity += 50;
+				window.alert("You have been bitten. Drop everything and do the following steps IMMEDIATELY.")
+				bittenEmergency();
+				exitLoop = false;
+			default:
+				getError();
+				exitLoop = true;
+		}
+	}
 }
+
+/*    end getBodyPart functions    */
 
 function getDiag(deathVal)
 {
@@ -182,6 +275,12 @@ function getDiag(deathVal)
 		window.alert("We have evaluated your severity level to be " + deathVal + ", which is clearly over 9000. Unfortunately, this doesn't correspond to power - this corresponds to how likely you are to die.");
 		window.alert("We advise you to prepare for certain death or zombification, because it sure looks like that is what's going to happen.");
 	}
+
+	else if (deathVal > 50 && deathVal < 9000)
+	{
+		window.alert("Okay, don't panic. Yet. We think you are still fine, but you could be anywhere from peachy to near-collapse. But hey, at least we're telling you something! The moral of the story is to get some rest!")
+		window.alert("Again, stay calm. Depending on how much it hurts, inform your local friendly surgeon of your ailments, and have him or her do the best he or she can! However, if you happen to be lacking of a local friendly surgeon, anyone who knows how to properly use duct tape, a pair of scissors, antibiotic cream, and a blindfold should do just as well. Good luck!")
+	}	 
 
 	else if (deathVal < 50)
 	{
