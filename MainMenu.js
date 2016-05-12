@@ -12,7 +12,7 @@ function MainMenu()
 		switch (choice) 
 		{
 			case 1:
-				sanityTest();
+				sanityMeter();
 				exitLoop = false;
 			/*case 2:
 				personalGuide();
