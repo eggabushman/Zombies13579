@@ -7,27 +7,27 @@ function MainMenu()
 
 	while (exitLoop) 
 	{
-		var choice = window.prompt("Choose an option: \n1. Sanity Test   First Aid   Quit");
+		var choice = window.prompt("Choose an option number: \n1. Sanity Test \n2. First Aid \n3. Quit");
 		window.resizeTo(100);
 		switch (choice) 
 		{
-			case "Sanity Test":
+			case 1:
 				
 				sanityTest();
 				exitLoop = false;
 			/*case 2:
 				personalGuide();
 				exitLoop = false; */
-			case "First Aid":
+			case 2:
 				firstAid();
 				exitLoop = false;
-			case  "Quit": 
+			case 3: 
 				window.close();
 				exitLoop = false;
 				break;
 			default:
 				window.alert("That's not an option!");
-				exitLoop = false; 
+				exitLoop = true; 
 		}
 	}
 
