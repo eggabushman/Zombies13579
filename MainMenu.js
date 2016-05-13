@@ -7,21 +7,17 @@ function MainMenu()
 
 	while (exitLoop) 
 	{
-		var choice = window.prompt("Choose an option number: \n1. Sanity Test \n2. First Aid \n3. Quit");
-		window.resizeTo(100);
+		var choice = window.prompt("Type an option number: \n1. Sanity Test \n2. First Aid \n3. Quit");
+		//window.resizeTo(100);
 		switch (choice) 
 		{
-			case 1:
-				
+			case "1":
 				sanityTest();
 				exitLoop = false;
-			/*case 2:
-				personalGuide();
-				exitLoop = false; */
-			case 2:
+			case "2":
 				firstAid();
 				exitLoop = false;
-			case 3: 
+			case "3": 
 				window.close();
 				exitLoop = false;
 				break;
