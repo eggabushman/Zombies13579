@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<title>High School Zombie Survival</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="styles.css" rel="stylesheet" type="text/css"/>
+		
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="SanityMeter.js">
+		</script>
+		<script type="text/javascript" src="FirstAid.js">
+		</script>
+		<script type="text/javascript" src="MainMenu.js">
+		</script>
+		
+	</head>
+	<body>
+	
+	<style type="text/css">
+	body { background:#9DC7B1 !important; }
+	.navbar { margin-bottom:0px;
+	}
+	.jumbotron {
+	text-align: center;}
+	</style>  
+	
+		<div class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html">The Definitive Zombie Outbreak Prevention Plan</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="threats.html">Threats</a></li>
+					<li><a href="surroundings.html">Surroundings</a></li>
+					<li><a href="arms.html">Armed For Survival</a></li>
+					<li><a href="interactive.html">Interactive Content</a></li>
+					<li><a href="sources.html">Additional Sources</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+				<div class="zombimg">
+					<li><a href="#"><img src="images/zombiesinline.png" height="50px"></a></li>
+				</div>
+				</ul>
+				<style>
+				.zombimg {
+				padding-right: 10px;
+				}
+				</style>
+		</div>
+		</div>
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Interactive Content:</h1>
+				<p>Click the button to interact with a zombie survival "Chatbot". Immerse yourself in these audio logs to experience chilling accounts of an entirely fictitious zombie attack. </p>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+			<div class="panel panel-default">
+				<div class="panel-heading"><b>Name:</b> Rufus Behindert <br>
+				<b>Location Found:</b> 1st floor male restroom</div>
+				<div class="panel-body">
+					<audio controls>
+						<source src="images/daniel.mp3" type="audio/mpeg" />
+						<a href="images/daniel.mp3">Daniel</a>
+					</audio>
+				</div>
+				</div>		
+			</div>
+			<div class="col-lg-4">
+	<form action="/Sanity" method="post">
+			 <div class="noobs">
+			 	 <input type="button" button type="button" class="btn btn-success" onclick="javascript:getGreeting();MainMenu();" value="Run Chatbot">
+    		</div>
+			<style>
+			.noobs{
+			text-align: center;
+			vertical-align: center !important;
+			}
+    		</style>
+		</form>
+		<script type="text/javascript">
+		//	getGreeting();
+		//MainMenu();
+			var insanity = 0;
+			//window.alert(getSanity(insanity)); //displays insanity
+		</script>
+		</div>
+		<div class="col-lg-4">
+		<div class="panel panel-default">
+				<div class="panel-heading"><b>Name:</b> Daniel Thurmann <br>
+				<b>Location Found:</b> A trashcan on the eastern corner of the 4th floor</div>
+				<div class="panel-body">
+				<audio controls>
+						<source src="images/rufus.mp3" type="audio/mpeg" />
+						<a href="images/rufus.mp3">Rufus</a>
+					</audio>
+				</div>
+				</div>		
+					
+			</div>
+		</div>
+	</body>
+</html>
