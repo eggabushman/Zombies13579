@@ -4,9 +4,6 @@ var severity = 0;
 
 function firstAid() // driver function
 {
-
-	bittenQuestion();
-
 	if (bittenQuestion() === true) 
 		bittenEmergency();
 
